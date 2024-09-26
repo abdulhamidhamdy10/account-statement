@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جدول حسابات</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="address bg-primary text-center  mb-4">جدول حسابات
+        <p id="balanceTotal" class="font-weight-bold">الناتج الصافي: 0.00 جنيه</p>
+    </h1>
+
+    <div class="container mt-5">
+        <div class="row mb-4">
+            <div class="col-md-6 ">
+                <h3 class="text-primary">إضافة دخل</h3>
+                <div class="input-section p-3 border rounded shadow">
+                    <input type="text" id="incomeType" class="form-control mb-2" placeholder="الاسم">
+                    <input type="number" id="incomeValue" class="form-control mb-2" placeholder="القيمة">
+                    <button class="btn btn-primary" onclick="addIncomeRow()">أضف دخل</button>
+                </div>
+            </div>
+            <hr>
+            <div class="col-md-6 mb-5">
+                <h3 class="text-primary">إضافة دفع</h3>
+                <div class="input-section p-3 border rounded shadow">
+                    <input type="text" id="expenseType" class="form-control mb-2" placeholder="الاسم">
+                    <input type="number" id="expenseValue" class="form-control mb-2" placeholder="القيمة">
+                    <button class="btn btn-primary" onclick="addExpenseRow()">أضف دفع</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 ">
+                    <h2 class="text-center text-primary">جدول الإيرادات</h2>
+                    <table class="table table-bordered ">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>نوع الدخل</th>
+                                <th>قيمة الدخل</th>
+                                <th>إجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="incomeBody">
+                            <!-- صفوف الإيرادات سيتم إضافتها هنا -->
+                        </tbody>
+                    </table>
+                    <p id="incomeTotal" class="font-weight-bold">مجموع الدخل: 0.00 جنيه</p>
+                </div>
+                <hr>
+                <div class="col-md-6 mb-5">
+                    <h2 class="text-center text-primary">جدول النفقات</h2>
+                    <table class="table table-bordered">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>نوع الدفع</th>
+                                <th>قيمة الدفع</th>
+                                <th>إجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="expenseBody">
+                            <!-- صفوف النفقات سيتم إضافتها هنا -->
+                        </tbody>
+                    </table>
+                    <p id="expenseTotal" class="font-weight-bold">مجموع الدفع: 0.00 جنيه</p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
